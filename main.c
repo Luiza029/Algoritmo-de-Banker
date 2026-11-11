@@ -58,6 +58,7 @@ int main(int argc, char *argv[]) {
     }
 
     imprimir_estado(max, allocation, need, available, n_clientes, n_recursos);
+    processar_comandos(n_clientes, n_recursos);
 
     liberar_matriz(need, n_clientes);
     liberar_matriz(allocation, n_clientes);

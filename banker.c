@@ -35,7 +35,7 @@ int **ler_customers(int n_recursos, int *n_clientes){
     }
 
     while(fgets(linha, sizeof(linha), arq) != NULL){
-        if(linha[0] == '\n' && linha[0] == '\r'){
+        if(linha[0] == '\n' || linha[0] == '\r'){
             continue;
         }
         int count = 0;
@@ -124,4 +124,100 @@ void imprimir_estado(int ** max, int **allocation, int **need, int *available, i
     printf("AVAILABLE ");
     imprimir_vetor(available, n_recursos);
     printf("\n");
+}
+
+int processar_comandos(int n_clientes, int n_recursos){
+    FILE *arq = fopen("commands.txt", "r");
+
+    if(arq == NULL){
+        printf("Erro: Arquivo nao encontrado\n");
+        return 0;
+    }
+
+    char linhaComando[256];
+    char tipo;
+    int cliente;
+    int recursos[n_recursos];
+
+    while(fgets(linhaComando, sizeof(linhaComando), arq) != NULL){
+        if(linhaComando[0] == '\n' || linhaComando[0] == '\r'){
+            continue;
+        }
+
+        if(ler_comando(linhaComando, n_clientes, n_recursos, &tipo, &cliente, recursos) == 0){
+            fclose(arq);
+            return 1;
+        }
+
+        if(tipo == '*'){
+            printf("tipo=*\n");
+        } else {
+            printf("tipo=%c cliente=%d recursos: ", tipo, cliente);
+            imprimir_vetor(recursos, n_recursos);
+            printf("\n");
+        }
+    }
+
+    fclose(arq);
+    return 1;
+}
+
+int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cliente, int *recursos){
+    char *pedaco = strtok(linha, " \r\n");
+
+    if(strcmp(pedaco, "*") == 0){
+        *tipo = '*';
+        return 1;
+    }
+
+    else if(strcmp(pedaco, "RQ") == 0){
+        *tipo = 'Q';
+    }
+
+    else if(strcmp(pedaco, "RL") == 0){
+        *tipo = 'L';
+    }
+
+    else{
+        printf("Erro: Comando desconhecido\n");
+        return 0;
+    }
+
+    pedaco = strtok(NULL, " \r\n");
+    if(pedaco == NULL){
+        printf("Erro: Comando incomplemto\n");
+        return 0;
+    }
+
+    char *fim;
+    long valor = strtol(pedaco, &fim, 10);
+
+    if(valor < 0  || valor >= n_clientes){
+        printf("Erro: commands.txt tem cliente inexistente: %ld\n", valor);
+        return 0;
+    }
+    
+    *cliente = valor;
+
+    int count = 0;
+    pedaco = strtok(NULL, " \r\n");
+    while(pedaco != NULL){
+        char *fim;
+        long valor = strtol(pedaco, &fim, 10);
+
+        if(fim == pedaco || *fim != '\0' || valor <0){
+            printf("Erro: commands.txt tem valor invalido: [%s]\n", pedaco);
+            return 0;
+        }
+
+        if(count >= n_recursos){
+            printf("Erro: commands.txt tem mais de %d recursos no comando\n", n_recursos);
+            return 0;
+        }
+
+        recursos[count] = valor;
+        count++;
+        pedaco = strtok(NULL, " \r\n");
+    }   
+    return 1; 
 }

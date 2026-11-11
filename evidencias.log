@@ -525,4 +525,163 @@ gcc main.o banker.o -o banker
 [?2004l[main c1c00c9] feat: cria funcao criar_matriz com calloc
  3 files changed, 55 insertions(+), 3 deletions(-)
  create mode 100644 banker
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat: cria funcao criar_matriz co
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat: cria funcao criar_matriz coScript started on 2026-11-11 18:25:03-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="229" LINES="19"]
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ date
+[?2004lWed Nov 11 18:25:04 -03 2026
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ whia[K[Koami
+[?2004lcwlui
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ pwd
+[?2004l/home/cwlui/projetos/algoritmo-de-banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kprocessar_comandos[m[K’:
+[01m[Kbanker.c:134:16:[m[K [01;31m[Kerror: [m[Kreturning ‘[01m[Kvoid *[m[K’ from a function with return type ‘[01m[Kint[m[K’ makes integer from pointer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+  134 |         return [01;31m[KNULL[m[K;
+      |                [01;31m[K^~~~[m[K
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_comando[m[K’:
+[01m[Kbanker.c:160:8:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrcpm[m[K’; did you mean ‘[01m[Kstrcmp[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  160 |     if([01;31m[Kstrcpm[m[K(pedaco, "*") == 0){
+      |        [01;31m[K^~~~~~[m[K
+      |        [32m[Kstrcmp[m[K
+[01m[Kbanker.c:178:17:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kint[m[K’ from ‘[01m[Kchar *[m[K’ makes integer from pointer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+  178 |     int valor = [01;31m[Kstrtok[m[K(NULL, " \r\n");
+      |                 [01;31m[K^~~~~~[m[K
+[01m[Kbanker.c:179:14:[m[K [01;35m[Kwarning: [m[Kcomparison between pointer and integer
+  179 |     if(valor [01;35m[K==[m[K NULL){
+      |              [01;35m[K^~[m[K
+[01m[Kbanker.c:184:10:[m[K [01;35m[Kwarning: [m[Kcomparisons like ‘[01m[KX<=Y<=Z[m[K’ do not have their mathematical meaning [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-parentheses-Wparentheses]8;;[m[K]
+  184 |     if([01;35m[K0 <= valor[m[K < n_clientes){
+      |        [01;35m[K~~^~~~~~~~[m[K
+[01m[Kbanker.c:194:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K[01;32m[K%d[m[K[m[K’ expects argument of type ‘[01m[K[01;32m[Kint[m[K[m[K’, but argument 2 has type ‘[01m[K[01;34m[Kint *[m[K[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wformat-Wformat=]8;;[m[K]
+  194 |             printf("Erro: customer.txt linha [01;32m[K%[m[K[01;32m[Kd[m[K tem valor invalido: %s\n", [01;34m[Kc[m[K[01;34m[Kl[m[K[01;34m[Ki[m[K[01;34m[Ke[m[K[01;34m[Kn[m[K[01;34m[Kt[m[K[01;34m[Ke[m[K[01;34m[K [m[K[01;34m[K+[m[K[01;34m[K [m[K[01;34m[K1[m[K, pedaco);
+      |                                              [01;32m[K~[m[K[01;32m[K^[m[K                            [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+      |                                               [01;32m[K|[m[K                                    [01;34m[K|[m[K
+      |                                               [01;32m[Kint[m[K                                  [01;34m[Kint *[m[K
+      |                                              [32m[K%ls[m[K
+[01m[Kbanker.c:199:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K[01;32m[K%d[m[K[m[K’ expects argument of type ‘[01m[K[01;32m[Kint[m[K[m[K’, but argument 2 has type ‘[01m[K[01;34m[Kint *[m[K[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wformat-Wformat=]8;;[m[K]
+  199 |             printf("Erro: customer.txt linha [01;32m[K%[m[K[01;32m[Kd[m[K tem mais de %d recursos\n", [01;34m[Kc[m[K[01;34m[Kl[m[K[01;34m[Ki[m[K[01;34m[Ke[m[K[01;34m[Kn[m[K[01;34m[Kt[m[K[01;34m[Ke[m[K[01;34m[K [m[K[01;34m[K+[m[K[01;34m[K [m[K[01;34m[K1[m[K, n_recursos);
+      |                                              [01;32m[K~[m[K[01;32m[K^[m[K                             [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+      |                                               [01;32m[K|[m[K                                     [01;34m[K|[m[K
+      |                                               [01;32m[Kint[m[K                                   [01;34m[Kint *[m[K
+      |                                              [32m[K%ls[m[K
+[01m[Kbanker.c:207:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+  207 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:8: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_comando[m[K’:
+[01m[Kbanker.c:211:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+  211 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear[2Ppwdwhoami[3Ppwdclear[1Pmake[K./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c main.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear./banker 10 5 7[10Pclear./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+Erro: Comando desconhecido
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+Erro: Comando desconhecido
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+Erro: customer.txt tem valor invalido
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+Erro: customer.txt tem valor invalido
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+Erro: commands.txt tem valor invalido: [1]
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+tipo=Q cliente=32766 recursos: 0 2 1
+tipo=Q cliente=32766 recursos: 3 0 2
+tipo=Q cliente=32766 recursos: 2 0 0
+tipo=Q cliente=32766 recursos: 0 0 2
+tipo=L cliente=32766 recursos: 0 1 1
+tipo=Q cliente=32766 recursos: 2 1 1
+tipo=*
+tipo=Q cliente=32766 recursos: 4 0 0
+tipo=Q cliente=32766 recursos: 1 0 2
+tipo=Q cliente=32766 recursos: 0 2 0
+tipo=Q cliente=32766 recursos: 0 1 0
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_comando[m[K’:
+[01m[Kbanker.c:196:63:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K[01;32m[K%ld[m[K[m[K’ expects argument of type ‘[01m[K[01;32m[Klong int[m[K[m[K’, but argument 2 has type ‘[01m[K[01;34m[Kint[m[K[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wformat-Wformat=]8;;[m[K]
+  196 |         printf("Erro: commands.txt tem cliente inexistente: [01;32m[K%[m[K[01;32m[Kl[m[K[01;32m[Kd[m[K\n", [01;34m[Kv[m[K[01;34m[Ka[m[K[01;34m[Kl[m[K[01;34m[Ko[m[K[01;34m[Kr[m[K);
+      |                                                             [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K     [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+      |                                                               [01;32m[K|[m[K     [01;34m[K|[m[K
+      |                                                             

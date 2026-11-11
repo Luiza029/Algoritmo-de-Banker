@@ -139,4 +139,312 @@ gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
 [?2004lgcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30make[K./banker 10 20 30
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30make[K./banker 10 20 30Script started on 2026-11-11 11:00:39-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="229" LINES="19"]
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ date
+[?2004lWed Nov 11 11:00:41 -03 2026
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ whoami
+[?2004lcwlui
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ pwd
+[?2004l/home/cwlui/projetos/algoritmo-de-banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:9:16:[m[K [01;31m[Kerror: [m[Kreturning ‘[01m[Kint[m[K’ from a function with return type ‘[01m[Kint **[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+    9 |         return [01;31m[K1[m[K;
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:20:16:[m[K [01;31m[Kerror: [m[Kreturning ‘[01m[Kint[m[K’ from a function with return type ‘[01m[Kint **[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   20 |         return [01;31m[K1[m[K;
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   26 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, "\n");
+      |                        [01;31m[K^~~~~~[m[K
+      |                        [32m[Kstrtoq[m[K
+[01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+[01m[Kbanker.c:36:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   36 |         pedaco [01;31m[K=[m[K strtok(NULL, "\n");
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:42:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   42 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   26 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, "\n");
+      |                        [01;31m[K^~~~~~[m[K
+      |                        [32m[Kstrtoq[m[K
+[01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+[01m[Kbanker.c:36:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   36 |         pedaco [01;31m[K=[m[K strtok(NULL, "\n");
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:42:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   42 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   26 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, "\n");
+      |                        [01;31m[K^~~~~~[m[K
+      |                        [32m[Kstrtoq[m[K
+[01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+[01m[Kbanker.c:36:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   36 |         pedaco [01;31m[K=[m[K strtok(NULL, ",\n");
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:42:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   42 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   26 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, "\n");
+      |                        [01;31m[K^~~~~~[m[K
+      |                        [32m[Kstrtoq[m[K
+[01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+[01m[Kbanker.c:36:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   36 |         pedaco [01;31m[K=[m[K strtok(NULL, ",\n");
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:42:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   42 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:27:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   27 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, ",\n");
+      |                        [01;31m[K^~~~~~[m[K
+      |                        [32m[Kstrtoq[m[K
+[01m[Kbanker.c:27:24:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+[01m[Kbanker.c:37:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   37 |         pedaco [01;31m[K=[m[K strtok(NULL, ",\n");
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:28:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+   28 |         int [01;35m[Kcount[m[K = 0;
+      |             [01;35m[K^~~~~[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:43:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   43 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+      |                       [32m[Kstrtoq[m[K
+[01m[Kbanker.c:31:37:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   31 |        char *pedaco = strtok(linha, [01;35m[K',\r\n'[m[K);
+      |                                     [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+[01m[Kbanker.c:53:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   53 |         pedaco [01;31m[K=[m[K strtok(NULL, ",\r\n");
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:64:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   64 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+      |                       [32m[Kstrtoq[m[K
+[01m[Kbanker.c:31:37:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   31 |        char *pedaco = strtok(linha, [01;35m[K',\r\n'[m[K);
+      |                                     [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+[01m[Kbanker.c:53:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   53 |         pedaco [01;31m[K=[m[K strtok(NULL, ",\r\n");
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:64:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   64 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+      |                       [32m[Kstrtoq[m[K
+[01m[Kbanker.c:31:37:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   31 |        char *pedaco = strtok(linha, [01;35m[K',\r\n'[m[K);
+      |                                     [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+[01m[Kbanker.c:53:31:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   53 |         pedaco = strtok(NULL, [01;35m[K',\r\n'[m[K);
+      |                               [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:53:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   53 |         pedaco [01;31m[K=[m[K strtok(NULL, ',\r\n');
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:63:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   63 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:37:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   37 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+      |                       [32m[Kstrtoq[m[K
+[01m[Kbanker.c:37:37:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   37 |        char *pedaco = strtok(linha, [01;35m[K',\r\n'[m[K);
+      |                                     [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:37:23:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   37 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+[01m[Kbanker.c:54:31:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   54 |         pedaco = strtok(NULL, [01;35m[K',\r\n'[m[K);
+      |                               [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:54:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   54 |         pedaco [01;31m[K=[m[K strtok(NULL, ',\r\n');
+      |                [01;31m[K^[m[K
+[01m[Kbanker.c:4:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn_customers[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+    4 | int **ler_customers(int n_recursos, [01;35m[Kint *n_customers[m[K){
+      |                                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[Kbanker.c:64:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
+   64 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:37:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   37 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+      |                       [32m[Kstrtoq[m[K
+[01m[Kbanker.c:37:37:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   37 |        char *pedaco = strtok(linha, [01;35m[K',\r\n'[m[K);
+      |                                     [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:37:23:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   37 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+[01m[Kbanker.c:59:31:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   59 |         pedaco = strtok(NULL, [01;35m[K',\r\n'[m[K);
+      |                               [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:59:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   59 |         pedaco [01;31m[K=[m[K strtok(NULL, ',\r\n');
+      |                [01;31m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:38:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   38 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+      |                       [32m[Kstrtoq[m[K
+[01m[Kbanker.c:38:37:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   38 |        char *pedaco = strtok(linha, [01;35m[K',\r\n'[m[K);
+      |                                     [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:38:23:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   38 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
+      |                       [01;31m[K^~~~~~[m[K
+[01m[Kbanker.c:62:31:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   62 |         pedaco = strtok(NULL, [01;35m[K',\r\n'[m[K);
+      |                               [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:62:16:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   62 |         pedaco [01;31m[K=[m[K strtok(NULL, ',\r\n');
+      |                [01;31m[K^[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+[01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
+[01m[Kbanker.c:63:31:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
+   63 |         pedaco = strtok(NULL, [01;35m[K',\r\n'[m[K);
+      |                               [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:63:31:[m[K [01;31m[Kerror: [m[Kpassing argument 2 of ‘[01m[Kstrtok[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   63 |         pedaco = strtok(NULL, [01;34m[K'[m[K[01;34m[K,[m[K[01;34m[K\[m[K[01;34m[Kr[m[K[01;34m[K\[m[K[01;34m[Kn[m[K[01;34m[K'[m[K);
+      |                               [01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+      |                               [01;34m[K|[m[K
+      |                               [01;34m[Kint[m[K
+In file included from [01m[Kbanker.c:3[m[K:
+[01m[K/usr/include/string.h:388:67:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[K[01;32m[Kconst char * restrict[m[K[m[K’ but argument is of type ‘[01m[K[01;34m[Kint[m[K[m[K’
+  388 | extern char *strtok (char *__restrict __s, [01;32m[Kc[m[K[01;32m[Ko[m[K[01;32m[Kn[m[K[01;32m[Ks[m[K[01;32m[Kt[m[K[01;32m[K [m[K[01;32m[Kc[m[K[01;32m[Kh[m[K[01;32m[Ka[m[K[01;32m[Kr[m[K[01;32m[K [m[K[01;32m[K*[m[K[01;32m[K_[m[K[01;32m[K_[m[K[01;32m[Kr[m[K[01;32m[Ke[m[K[01;32m[Ks[m[K[01;32m[Kt[m[K[01;32m[Kr[m[K[01;32m[Ki[m[K[01;32m[Kc[m[K[01;32m[Kt[m[K[01;32m[K [m[K[01;32m[K_[m[K[01;32m[K_[m[K[01;32m[Kd[m[K[01;32m[Ke[m[K[01;32m[Kl[m[K[01;32m[Ki[m[K[01;32m[Km[m[K)
+      |                                            [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
+make: *** [Makefile:5: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear[1Pmakeclear[1Pmakeclear[1Pmakeclear[1Pmake[Kmake
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear[1Pmakeclear[1Pmakeclear[1Pmakeclear[1Pmake[K./banker 10 20 30
+[?2004l10 
+20 
+30 
+Erro: Arquivo nao encontrado
+Erro
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lmake: 'banker' is up to date.
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30
+[?2004l10 
+20 
+30 
+Clientes lidos: 5
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./[K[Kmake
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30[K[K[K[K[K5
+[?2004l10 
+5 
+Erro: customer.txt linha 1 tem mais de 2 recursos
+Erro
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5
+[?2004lErro: customer.txt linha 1 tem mais de 2 recursos
+Erro
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5
+[?2004lErro: customer.txt linha 1 tem mais de 2 recursos
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-11 12:01:30-03:00 [COMMAND_EXIT_CODE="1"]

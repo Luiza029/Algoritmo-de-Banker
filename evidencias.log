@@ -684,4 +684,72 @@ tipo=Q cliente=32766 recursos: 0 1 0
   196 |         printf("Erro: commands.txt tem cliente inexistente: [01;32m[K%[m[K[01;32m[Kl[m[K[01;32m[Kd[m[K\n", [01;34m[Kv[m[K[01;34m[Ka[m[K[01;34m[Kl[m[K[01;34m[Ko[m[K[01;34m[Kr[m[K);
       |                                                             [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K     [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
       |                                                               [01;32m[K|[m[K     [01;34m[K|[m[K
-      |                                                             
+      |                                                               [01;32m[K|[m[K     [01;34m[Kint[m[K
+      |                                                               [01;32m[Klong int[m[K
+      |                                                             [32m[K%d[m[K
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+tipo=Q cliente=0 recursos: 0 2 1
+tipo=Q cliente=2 recursos: 3 0 2
+tipo=Q cliente=1 recursos: 2 0 0
+tipo=Q cliente=4 recursos: 0 0 2
+tipo=L cliente=0 recursos: 0 1 1
+tipo=Q cliente=3 recursos: 2 1 1
+tipo=*
+tipo=Q cliente=4 recursos: 4 0 0
+tipo=Q cliente=1 recursos: 1 0 2
+tipo=Q cliente=0 recursos: 0 2 0
+tipo=Q cliente=2 recursos: 0 1 0
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lmake: 'banker' is up to date.
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+Erro: Comando desconhecido
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 10 5 7
+[?2004lMAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3
+3 2 2 | 0 0 0 | 3 2 2
+9 0 2 | 0 0 0 | 9 0 2
+2 2 2 | 0 0 0 | 2 2 2
+4 3 3 | 0 0 0 | 4 3 3
+
+AVAILABLE 10 5 7
+tipo=Q cliente=0 recursos: 0 2 1
+Erro: Comando incomplemto
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -[K[K[K[K[K[K[K[Kadd .
+[?2004l[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat [K: [7mimplementa leitura e validacao do commands.txt[27mimplementa leitura e validacao do commands.txt:[K"
+[?2004l[main bf5b91d] feat: implementa leitura e validacao do commands.txt
+ 6 files changed, 272 insertions(+), 3 deletions(-)
+ create mode 100644 commands.txt
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git push
+[?2004lEnumerating objects: 14, done.
+Counting objects:   7% (1/14)Counting objects:  14% (2/14)Counting objects:  21% (3/14)Counting objects:  28% (4/14)Counting objects:  35% (5/14)Counting objects:  42% (6/14)Counting objects:  50% (7/14)Counting objects:  57% (8/14)Counting objects:  64% (9/14)Counting objects:  71% (10/14)Counting objects:  78% (11/14)Counting objects:  85% (12/14)Counting objects:  92% (13/14)Counting objects: 100% (14/14)Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects:  12% (1/8)Compressing objects:  25% (2/8)Compressing objects:  37% (3/8)Compressing objects:  50% (4/8)Compressing objects:  62% (5/8)Compressing objects:  75% (6/8)Compressing objects:  87% (7/8)Compressing objects: 100% (8/8)Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)Writing objects:  25% (2/8)Writing objects:  37% (3/8)Writing objects:  50% (4/8)Writing objects:  62% (5/8)Writing objects:  75% (6/8)Writing objects:  87% (7/8)Writing objects: 100% (8/8)Writing objects: 100% (8/8), 5.82 KiB | 5.82 MiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/5)[Kremote: Resolving deltas:  20% (1/5)[Kremote: Resolving deltas:  40% (2/5)[Kremote: Resolving deltas:  60% (3/5)[Kremote: Resolving deltas:  80% (4/5)[Kremote: Resolving deltas: 100% (5/5)[Kremote: Resolving deltas: 100% (5/5), completed with 5 local objects.[K
+To https://github.com/Luiza029/Algoritmo-de-Banker.git
+   2f587a1..bf5b91d  main -> main
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make clean
+[?2004lrm -f *.o banker result.txt
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+Script done on 2026-11-11 20:16:39-03:00 [COMMAND_EXIT_CODE="0"]

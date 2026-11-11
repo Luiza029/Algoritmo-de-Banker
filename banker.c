@@ -138,6 +138,7 @@ int processar_comandos(int n_clientes, int n_recursos){
     char tipo;
     int cliente;
     int recursos[n_recursos];
+    int countLinha = 0;
 
     while(fgets(linhaComando, sizeof(linhaComando), arq) != NULL){
         if(linhaComando[0] == '\n' || linhaComando[0] == '\r'){
@@ -146,17 +147,39 @@ int processar_comandos(int n_clientes, int n_recursos){
 
         if(ler_comando(linhaComando, n_clientes, n_recursos, &tipo, &cliente, recursos) == 0){
             fclose(arq);
-            return 1;
+            return 0;
+        }
+
+        countLinha++;
+    }
+
+    if(countLinha == 0){
+        printf("Erro: Nenhum comando lido no arquivo\n");
+        return 0;
+    }
+
+    rewind(arq);
+
+     while(fgets(linhaComando, sizeof(linhaComando), arq) != NULL){
+        if(linhaComando[0] == '\n' || linhaComando[0] == '\r'){
+            continue;
+        }
+
+        if(ler_comando(linhaComando, n_clientes, n_recursos, &tipo, &cliente, recursos) == 0){
+            fclose(arq);
+            return 0;
         }
 
         if(tipo == '*'){
             printf("tipo=*\n");
-        } else {
+        } 
+        
+        else {
             printf("tipo=%c cliente=%d recursos: ", tipo, cliente);
             imprimir_vetor(recursos, n_recursos);
             printf("\n");
         }
-    }
+     }
 
     fclose(arq);
     return 1;

@@ -3,7 +3,7 @@
 #include <string.h>
 #include "banker.h"
 
-int **ler_customers(int n_recursos, int *n_customers){
+int **ler_customers(int n_recursos, int *n_clientes){
     FILE *arq = fopen("customer.txt", "r");
 
     if(arq == NULL){
@@ -70,7 +70,7 @@ int **ler_customers(int n_recursos, int *n_customers){
         cliente++;
     }
 
-    *n_customers = cliente;
+    *n_clientes = cliente;
     fclose(arq);
     return max;
 }
@@ -98,4 +98,30 @@ void liberar_matriz(int **m, int linhas){
     }
 
     free(m);
+}
+
+void imprimir_vetor(int *v, int n){
+    printf("%d", v[0]);
+
+    for(int i=1; i<n; i++){
+        printf(" %d", v[i]);
+    }
+}
+
+void imprimir_estado(int ** max, int **allocation, int **need, int *available, int n_clientes, int n_recursos){
+    printf("MAXIMUM | ALLOCATION | NEED\n");
+
+    for(int i=0; i<n_clientes; i++){
+        imprimir_vetor(max[i], n_recursos);
+        printf(" | ");
+        imprimir_vetor(allocation[i], n_recursos);
+        printf(" | ");
+        imprimir_vetor(need[i], n_recursos);
+        printf("\n");
+    }
+
+    printf("\n");
+    printf("AVAILABLE ");
+    imprimir_vetor(available, n_recursos);
+    printf("\n");
 }

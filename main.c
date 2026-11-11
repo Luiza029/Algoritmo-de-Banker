@@ -28,38 +28,40 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    int n_customers = 0;
-    int **max = ler_customers(n_recursos, &n_customers);
+    int n_clientes = 0;
+    int **max = ler_customers(n_recursos, &n_clientes);
     
     if(max == NULL){
         free(available);
         return 1;
     }
     
-    int **allocation = criar_matriz(n_customers, n_recursos); 
+    int **allocation = criar_matriz(n_clientes, n_recursos); 
     if(allocation == NULL){
-        liberar_matriz(max, n_customers);
+        liberar_matriz(max, n_clientes);
         free(available);
         return 1;
     }
 
-    int **need = criar_matriz(n_customers, n_recursos);
+    int **need = criar_matriz(n_clientes, n_recursos);
     if(need == NULL){
-        liberar_matriz(allocation, n_customers);
-        liberar_matriz(max, n_customers);
+        liberar_matriz(allocation, n_clientes);
+        liberar_matriz(max, n_clientes);
         free(available);
         return 1;
     }
 
-    for(int i=0; i<n_customers; i++){
+    for(int i=0; i<n_clientes; i++){
         for(int j=0; j<n_recursos; j++){
             need[i][j] = max[i][j];
         }
     }
 
-    liberar_matriz(need, n_customers);
-    liberar_matriz(allocation, n_customers);
-    liberar_matriz(max, n_customers);
+    imprimir_estado(max, allocation, need, available, n_clientes, n_recursos);
+
+    liberar_matriz(need, n_clientes);
+    liberar_matriz(allocation, n_clientes);
+    liberar_matriz(max, n_clientes);
     free(available);
 
     return 0;

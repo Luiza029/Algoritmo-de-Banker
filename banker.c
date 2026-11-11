@@ -89,3 +89,13 @@ int **criar_matriz(int linhas, int colunas){
 
     return matriz;
 }
+
+void liberar_matriz(int **m, int linhas){
+    if(m == NULL) return;
+
+    for(int i=0; i<linhas; i++){
+        free(m[i]);
+    }
+
+    free(m);
+}

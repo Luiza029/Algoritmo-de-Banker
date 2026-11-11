@@ -480,4 +480,49 @@ make: *** [Makefile:8: banker.o] Error 1
 [01m[Kbanker.c:28:17:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kcriar_matriz[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    28 |     int **max = [01;31m[Kcriar_matriz[m[K(countLinha, n_recursos);
       |                 [01;31m[K^~~~~~~~~~~~[m[K
-[01m[Kbanker.c:28:17:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Ki
+[01m[Kbanker.c:28:17:[m[K [01;31m[Kerror: [m[Kinitialization of ‘[01m[Kint **[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+[01m[Kbanker.c:[m[K At top level:
+[01m[Kbanker.c:77:7:[m[K [01;31m[Kerror: [m[Kconflicting types for ‘[01m[Kcriar_matriz[m[K’; have ‘[01m[Kint **(int,  int)[m[K’
+   77 | int **[01;31m[Kcriar_matriz[m[K(int linhas, int colunas){
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[Kbanker.c:28:17:[m[K [01;36m[Knote: [m[Kprevious implicit declaration of ‘[01m[Kcriar_matriz[m[K’ with type ‘[01m[Kint()[m[K’
+   28 |     int **max = [01;36m[Kcriar_matriz[m[K(countLinha, n_recursos);
+      |                 [01;36m[K^~~~~~~~~~~~[m[K
+make: *** [Makefile:8: banker.o] Error 1
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make[1Ppwdwhoami[2Pdatecleargit commit -m "feat: implementa funcao para leitura do customer.txt e cria a matriz" && git push[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kmake clean[1Pgit add .commit -m "feat: implementa funcao para leitura do customer.txt e cria a matriz" && git push[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclear[K[1Pdatewhoami[3Ppwdmake.[K[K[K[K[K./banker 10 5 7
+[?2004lSegmentation fault         ./banker 10 5 7
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7make[K./banker 10 5 7
+[?2004lClientes lidos: 5
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lSegmentation fault         ./banker 10 5 7
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004lgcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004lClientes lidos: 5
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git add .
+[?2004l[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat: [7mcria funcao criar_matriz com calloc[27mcria funcao criar_matriz com calloc"
+[?2004l[main c1c00c9] feat: cria funcao criar_matriz com calloc
+ 3 files changed, 55 insertions(+), 3 deletions(-)
+ create mode 100644 banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat: cria funcao criar_matriz co

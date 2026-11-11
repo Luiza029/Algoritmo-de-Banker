@@ -1,7 +1,10 @@
-banker: banker.o
-	gcc banker.o -o banker
+banker: main.o banker.o
+	gcc main.o banker.o -o banker
 
-banker.o: banker.c
+main.o: main.c banker.h
+	gcc -Wall -Wextra -c main.c
+
+banker.o: banker.c banker.h
 	gcc -Wall -Wextra -c banker.c
 
 run: banker

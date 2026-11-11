@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "banker.h"
 
 int **ler_customers(int n_recursos, int *n_customers){
     FILE *arq = fopen("customer.txt", "r");
@@ -25,9 +26,12 @@ int **ler_customers(int n_recursos, int *n_customers){
     rewind(arq);
     int cliente = 0;
 
-    int **max = malloc(countLinha * sizeof(int*));
-    for(int i=0; i<countLinha; i++){
-        max[i] = malloc(n_recursos * sizeof(int));
+    int **max = criar_matriz(countLinha, n_recursos);
+
+    if(max == NULL){
+        printf("Erro: Erro ao alocar matriz\n");
+        fclose(arq);
+        return NULL;
     }
 
     while(fgets(linha, sizeof(linha), arq) != NULL){
@@ -69,4 +73,19 @@ int **ler_customers(int n_recursos, int *n_customers){
     *n_customers = cliente;
     fclose(arq);
     return max;
+}
+
+int **criar_matriz(int linhas, int colunas){
+    int **matriz = calloc(linhas, sizeof(int*));
+
+    if(matriz == NULL){
+        printf("Erro: Erro ao alocar matriz\n");
+        return NULL;
+    }
+
+    for(int i=0; i<linhas; i++){
+        matriz[i] = calloc(colunas, sizeof(int*));
+    }
+
+    return matriz;
 }

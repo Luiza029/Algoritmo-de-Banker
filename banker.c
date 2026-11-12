@@ -110,35 +110,36 @@ void liberar_matriz(int **m, int linhas){
     free(m);
 }
 
-void imprimir_vetor(int *v, int n){
-    printf("%d", v[0]);
+void imprimir_vetor(FILE *saida, int *v, int n){
+    fprintf(saida, "%d", v[0]);
 
     for(int i=1; i<n; i++){
-        printf(" %d", v[i]);
+        fprintf(saida, " %d", v[i]);
     }
 }
 
-void imprimir_estado(int ** max, int **allocation, int **need, int *available, int n_clientes, int n_recursos){
-    printf("MAXIMUM | ALLOCATION | NEED\n");
+void imprimir_estado(FILE *saida, int ** max, int **allocation, int **need, int *available, int n_clientes, int n_recursos){
+    fprintf(saida, "MAXIMUM | ALLOCATION | NEED\n");
 
     for(int i=0; i<n_clientes; i++){
-        imprimir_vetor(max[i], n_recursos);
-        printf(" | ");
-        imprimir_vetor(allocation[i], n_recursos);
-        printf(" | ");
-        imprimir_vetor(need[i], n_recursos);
-        printf("\n");
+        imprimir_vetor(saida, max[i], n_recursos);
+        fprintf(saida, " | ");
+        imprimir_vetor(saida, allocation[i], n_recursos);
+        fprintf(saida, " | ");
+        imprimir_vetor(saida, need[i], n_recursos);
+        fprintf(saida, "\n");
     }
-
-    printf("AVAILABLE ");
-    imprimir_vetor(available, n_recursos);
-    printf("\n");
+    
+    fprintf(saida, "AVAILABLE ");
+    imprimir_vetor(saida, available, n_recursos);
+    fprintf(saida, "\n");
 }
 
-int processar_comandos(int n_clientes, int n_recursos){
+int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocation, int **need, int *available){
     FILE *arq = fopen("commands.txt", "r");
+    FILE *saida = fopen("result.txt", "w");
 
-    if(arq == NULL){
+    if(arq == NULL || saida == NULL){
         printf("Erro: Arquivo nao encontrado\n");
         return 0;
     }
@@ -181,17 +182,22 @@ int processar_comandos(int n_clientes, int n_recursos){
         }
 
         if(tipo == '*'){
-            printf("tipo=*\n");
+            imprimir_estado(saida, max, allocation, need, available, n_clientes, n_recursos); 
         } 
+
+        else if(tipo == 'L'){
+            release(saida, cliente, recursos, need, available, allocation, n_recursos);
+        }
         
         else {
-            printf("tipo=%c cliente=%d recursos: ", tipo, cliente);
-            imprimir_vetor(recursos, n_recursos);
-            printf("\n");
+            fprintf(saida, "RQ cliente %d: ", cliente);
+            imprimir_vetor(saida, recursos, n_recursos);
+            fprintf(saida, "\n");
         }
      }
 
     fclose(arq);
+    fclose(saida);
     return 1;
 }
 
@@ -277,4 +283,27 @@ int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cli
     }
 
     return 1; 
+}
+
+void release(FILE *saida, int cliente, int *recursos, int **need, int *available, int **allocation, int n_recursos){
+    for(int i=0; i<n_recursos; i++){
+        if(recursos[i] > allocation[cliente][i]){
+            fprintf(saida, "The customer %d cannot release the resources ", cliente);
+            imprimir_vetor(saida, recursos, n_recursos);
+            fprintf(saida, " because it holds only ");
+            imprimir_vetor(saida, allocation[cliente], n_recursos);
+            fprintf(saida, "\n");
+            return;
+        }
+    }
+
+    for(int i=0; i<n_recursos; i++){
+        allocation[cliente][i] -= recursos[i];
+        need[cliente][i] += recursos[i]; 
+        available[i] += recursos[i]; 
+    }
+
+    fprintf(saida, "Release from customer %d the resources ", cliente);
+    imprimir_vetor(saida, recursos, n_recursos);
+    fprintf(saida, "\n");
 }

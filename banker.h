@@ -1,5 +1,6 @@
 #ifndef BANKER_H
 #define BANKER_H
+#define MAX_INSTANCIAS 1000000
 
 int **ler_customers(int n_recursos, int *n_clientes);
 int **criar_matriz(int linhas, int colunas);

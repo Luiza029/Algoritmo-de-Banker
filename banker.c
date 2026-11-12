@@ -14,9 +14,12 @@ int **ler_customers(int n_recursos, int *n_clientes){
     int countLinha = 0;
     char linha[256];
     while(fgets(linha, sizeof(linha), arq) != NULL){
-        countLinha++;
+        if(linha[0] != '\n' && linha[0] != '\r'){
+            countLinha++;
+        }
     }
 
+    printf("%d\n", countLinha);
     if(countLinha == 0){
         printf("Erro: Nenhum linha lida no arquivo\n");
         fclose(arq);
@@ -29,7 +32,6 @@ int **ler_customers(int n_recursos, int *n_clientes){
     int **max = criar_matriz(countLinha, n_recursos);
 
     if(max == NULL){
-        printf("Erro: Erro ao alocar matriz\n");
         fclose(arq);
         return NULL;
     }
@@ -48,12 +50,14 @@ int **ler_customers(int n_recursos, int *n_clientes){
             if(fim == pedaco || *fim != '\0' || valor <0){
                 printf("Erro: customer.txt linha %d tem valor invalido: %s\n", cliente + 1, pedaco);
                 fclose(arq);
+                liberar_matriz(max, countLinha);
                 return NULL;
             }
 
             if(count >= n_recursos){
                 printf("Erro: customer.txt linha %d tem mais de %d recursos\n", cliente + 1, n_recursos);
                 fclose(arq);
+                liberar_matriz(max, countLinha);
                 return NULL;
             }
 
@@ -65,6 +69,7 @@ int **ler_customers(int n_recursos, int *n_clientes){
         if(count != n_recursos){
             printf("Erro: customer.txt linha %d tem %d recursos, esperado %d\n", cliente + 1, count, n_recursos);
             fclose(arq);
+            liberar_matriz(max, countLinha);
             return NULL;
         }
         cliente++;
@@ -84,7 +89,12 @@ int **criar_matriz(int linhas, int colunas){
     }
 
     for(int i=0; i<linhas; i++){
-        matriz[i] = calloc(colunas, sizeof(int*));
+        matriz[i] = calloc(colunas, sizeof(int));
+
+        if(matriz[i] == NULL){
+            liberar_matriz(matriz, i);
+            return NULL;
+        }
     }
 
     return matriz;
@@ -120,7 +130,6 @@ void imprimir_estado(int ** max, int **allocation, int **need, int *available, i
         printf("\n");
     }
 
-    printf("\n");
     printf("AVAILABLE ");
     imprimir_vetor(available, n_recursos);
     printf("\n");
@@ -155,6 +164,7 @@ int processar_comandos(int n_clientes, int n_recursos){
 
     if(countLinha == 0){
         printf("Erro: Nenhum comando lido no arquivo\n");
+        fclose(arq);
         return 0;
     }
 
@@ -188,8 +198,21 @@ int processar_comandos(int n_clientes, int n_recursos){
 int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cliente, int *recursos){
     char *pedaco = strtok(linha, " \r\n");
 
+    if(pedaco == NULL){
+        printf("Erro: Linha em branco\n");
+        return 0;
+    }
+
     if(strcmp(pedaco, "*") == 0){
         *tipo = '*';
+
+        pedaco = strtok(NULL, " \r\n");
+
+        if(pedaco != NULL){
+            printf("Erro: Argumentos demais no [*]\n");
+            return 0;
+        }
+
         return 1;
     }
 
@@ -214,6 +237,11 @@ int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cli
 
     char *fim;
     long valor = strtol(pedaco, &fim, 10);
+
+    if(fim == pedaco || *fim != '\0'){
+        printf("Erro: commands.txt tem cliente invalido: [%s]\n", pedaco);
+        return 0;
+    }
 
     if(valor < 0  || valor >= n_clientes){
         printf("Erro: commands.txt tem cliente inexistente: %ld\n", valor);
@@ -242,5 +270,11 @@ int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cli
         count++;
         pedaco = strtok(NULL, " \r\n");
     }   
+
+    if(count != n_recursos){
+        printf("Erro: Recusos a menos\n");
+        return 0;
+    }
+
     return 1; 
 }

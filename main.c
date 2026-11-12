@@ -15,17 +15,25 @@ int main(int argc, char *argv[]) {
 
     if(available == NULL){
         printf("Erro: Vetor nao alocado\n");
-        return -1;
+        return 1;
     }
 
     for(int i=0; i<n_recursos; i++){
-        available[i] = strtol(argv[i+1], &endptr, 10);
+        long valor = strtol(argv[i+1], &endptr, 10);
 
         if(endptr == argv[i+1] || *endptr != '\0' || available[i] < 0){
             printf("Erro: Entrada invalida, digite apenas inteiros nao negativos\n");
             free(available);
             return 1;
         }
+
+        if(valor > MAX_INSTANCIAS){
+            printf("Erro: Numero muito grande [%ld]\n", valor);
+            free(available);
+            return 1;
+        }
+
+        available[i] = valor;
     }
 
     int n_clientes = 0;

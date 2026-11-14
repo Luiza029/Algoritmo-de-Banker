@@ -189,9 +189,7 @@ int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocati
         }
         
         else {
-            fprintf(saida, "RQ cliente %d: ", cliente);
-            imprimir_vetor(saida, recursos, n_recursos);
-            fprintf(saida, "\n");
+            request(saida, cliente, recursos, need, available, allocation, n_clientes, n_recursos);
         }
      }
 
@@ -347,11 +345,56 @@ int eh_seguro(int *available, int **allocation, int **need, int n_clientes, int 
 
     for(int i=0; i<n_clientes; i++){
         if(termino[i] != 1){
-            printf("Nao eh seguro\n");
             return 0;
         }
     }
 
-    printf("Eh seguro\n");
     return 1;
+}
+
+void request(FILE *saida, int cliente, int *recursos, int **need, int *available, int **allocation, int n_clientes, int n_recursos){
+    for(int j=0; j<n_recursos; j++){
+        if(recursos[j] > need[cliente][j]){
+            fprintf(saida, "The customer %d request ", cliente);
+            imprimir_vetor(saida, recursos, n_recursos);
+            fprintf(saida, " was denied because exceed its maximum allocation\n");
+            return;
+        }
+    }
+    
+    for(int j=0; j<n_recursos; j++){
+        if(recursos[j] > available[j]){
+           fprintf(saida, "The resources ");
+            imprimir_vetor(saida, available, n_recursos);
+            fprintf(saida, " are not enough to customer %d request ", cliente);
+            imprimir_vetor(saida, recursos, n_recursos);
+            fprintf(saida, "\n");
+            return;
+        }
+    }
+    
+    for(int j=0; j<n_recursos; j++){
+        available[j] -= recursos[j];
+        allocation[cliente][j] += recursos[j]; 
+        need[cliente][j] -= recursos[j]; 
+    }
+
+
+    if(eh_seguro(available, allocation, need, n_clientes, n_recursos) == 1){
+        fprintf(saida, "Allocate to customer %d the resources ", cliente);
+        imprimir_vetor(saida, recursos, n_recursos);
+        fprintf(saida, "\n");
+    }
+
+    else{
+        for(int j=0; j<n_recursos; j++){
+            available[j] += recursos[j];
+            allocation[cliente][j] -= recursos[j]; 
+            need[cliente][j] += recursos[j]; 
+        }
+
+        fprintf(saida, "The customer %d request ", cliente);
+        imprimir_vetor(saida, recursos, n_recursos);
+        fprintf(saida, " was denied because result in an unsafe state\n");
+    }
 }

@@ -11,4 +11,5 @@ int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cli
 int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocation, int **need, int *available);
 void release(FILE *saida, int cliente, int *recursos, int **need, int *available, int **allocation, int n_recursos);
 int eh_seguro(int *available, int **allocation, int **need, int n_clientes, int n_recursos);
+void request(FILE *saida, int cliente, int *recursos, int **need, int *available, int **allocation, int n_clientes, int n_recursos);
 #endif

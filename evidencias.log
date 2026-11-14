@@ -1,21 +1,29 @@
 Script started on 2026-11-10 20:27:16-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="229" LINES="19"]
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ date
-[?2004lTue Nov 10 20:27:18 -03 2026
+[?2004l
+Tue Nov 10 20:27:18 -03 2026
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ wj[Khoami
-[?2004lcwlui
+[?2004l
+cwlui
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ pwd
-[?2004l/home/cwlui/projetos/algoritmo-de-banker
+[?2004l
+/home/cwlui/projetos/algoritmo-de-banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make[1Ppwdwhoami[2Pdategit push[4Pdatewhoami[3Ppwdmake[K.ban[K[K[K;bank[K[K[K[K[K/n[Kbanker
-[?2004lawda[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker[4Pmake./banker 10 20 32
-[?2004largv[1] = 10
+[?2004l
+awda[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker[4Pmake./banker 10 20 32
+[?2004l
+argv[1] = 10
 argv[2] = 20
 argv[3] = 32
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kmain[m[K’:
 [01m[Kbanker.c:16:16:[m[K [01;35m[Kwarning: [m[Kcast from pointer to integer of different size [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-pointer-to-int-cast-Wpointer-to-int-cast]8;;[m[K]
    16 |     int *vet = [01;35m[K([m[Kint)malloc(n_resources * sizeof(int));
@@ -32,7 +40,8 @@ In file included from [01m[Kbanker.c:2[m[K:
       |                         [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kmain[m[K’:
 [01m[Kbanker.c:24:34:[m[K [01;31m[Kerror: [m[Kpassing argument 2 of ‘[01m[Kstrtol[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
    24 |         vet[i] = strtol(argv[i], [01;34m[K*[m[K[01;34m[Ke[m[K[01;34m[Kn[m[K[01;34m[Kd[m[K[01;34m[Kp[m[K[01;34m[Kt[m[K[01;34m[Kr[m[K, 10);
@@ -45,8 +54,10 @@ In file included from [01m[Kbanker.c:2[m[K:
       |                         [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ male
-[?2004lCommand 'male' not found, did you mean:
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ male
+[?2004l
+Command 'male' not found, did you mean:
   command 'mame' from snap mame (mame0289)
   command 'mle' from snap mle-editor (1.8.1)
   command 'vale' from snap vale (3.25.1)
@@ -59,95 +70,121 @@ make: *** [Makefile:5: banker.o] Error 1
   command 'mle' from deb mle (1.7.2-1build1)
 See 'snap info <snapname>' for additional versions.
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ma[K[Kclear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ c[Kmake
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ c[Kmake
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make r[K[K[K[K[K[K./banker
-[?2004lErro: ./banker <arg1> <arg2> <arg3>[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+Erro: ./banker <arg1> <arg2> <arg3>[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker[4Pmake./banker
-[?2004lErro: ./banker <arg1> <arg2> <arg3>
+[?2004l
+Erro: ./banker <arg1> <arg2> <arg3>
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker[4Pmake./banker 10[K0 20 30
-[?2004largv[1] = 10
+[?2004l
+argv[1] = 10
 argv[2] = 20
 argv[3] = 30
 0 
 10 
 20 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30
-[?2004largv[1] = 10
+[?2004l
+argv[1] = 10
 argv[2] = 20
 argv[3] = 30
 10 
 20 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30
-[?2004largv[1] = 10
+[?2004l
+argv[1] = 10
 argv[2] = 20
 argv[3] = 30
 0 
 10 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear./banker 10 20 30make[K./banker 10 20 30
-[?2004l0 
+[?2004l
+0 
 10 
 20 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 10 20 30make[K
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30
-[?2004l10 
+[?2004l
+10 
 20 
 0 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30make[K./banker 10 20 30
-[?2004l0
+[?2004l
+0
 1
 2
 10 
 20 
 0 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 10 20 30make[K
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30
-[?2004l0
+[?2004l
+0
 1
 0 
 10 
 0 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 10 20 30make[K
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30
-[?2004l1
+[?2004l
+1
 2
 0 
 10 
 20 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30make[K./banker 10 20 30Script started on 2026-11-11 11:00:39-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="229" LINES="19"]
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ date
-[?2004lWed Nov 11 11:00:41 -03 2026
+[?2004l
+Wed Nov 11 11:00:41 -03 2026
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ whoami
-[?2004lcwlui
+[?2004l
+cwlui
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ pwd
-[?2004l/home/cwlui/projetos/algoritmo-de-banker
+[?2004l
+/home/cwlui/projetos/algoritmo-de-banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:9:16:[m[K [01;31m[Kerror: [m[Kreturning ‘[01m[Kint[m[K’ from a function with return type ‘[01m[Kint **[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
     9 |         return [01;31m[K1[m[K;
@@ -171,7 +208,8 @@ gcc banker.o -o banker
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    26 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, "\n");
@@ -189,7 +227,8 @@ make: *** [Makefile:5: banker.o] Error 1
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    26 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, "\n");
@@ -207,8 +246,10 @@ make: *** [Makefile:5: banker.o] Error 1
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:26:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    26 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, "\n");
@@ -226,7 +267,8 @@ make: *** [Makefile:5: banker.o] Error 1
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:27:24:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    27 |         char *pedaco = [01;31m[Kstrtok[m[K(linha, ",\n");
@@ -247,7 +289,8 @@ make: *** [Makefile:5: banker.o] Error 1
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
@@ -270,8 +313,10 @@ make: *** [Makefile:5: banker.o] Error 1
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
@@ -294,7 +339,8 @@ make: *** [Makefile:5: banker.o] Error 1
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:31:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    31 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
@@ -320,7 +366,8 @@ make: *** [Makefile:5: banker.o] Error 1
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:37:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    37 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
@@ -346,7 +393,8 @@ make: *** [Makefile:5: banker.o] Error 1
       | [01;35m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:37:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    37 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
@@ -366,7 +414,8 @@ make: *** [Makefile:5: banker.o] Error 1
       |                [01;31m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:38:23:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kstrtok[m[K’; did you mean ‘[01m[Kstrtoq[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    38 |        char *pedaco = [01;31m[Kstrtok[m[K(linha, ',\r\n');
@@ -386,7 +435,8 @@ make: *** [Makefile:5: banker.o] Error 1
       |                [01;31m[K^[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:63:31:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wmultichar-Wmultichar]8;;[m[K]
    63 |         pedaco = strtok(NULL, [01;35m[K',\r\n'[m[K);
@@ -402,21 +452,26 @@ In file included from [01m[Kbanker.c:3[m[K:
       |                                            [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
 make: *** [Makefile:5: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear[1Pmakeclear[1Pmakeclear[1Pmakeclear[1Pmake[Kmake
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear[1Pmakeclear[1Pmakeclear[1Pmakeclear[1Pmake[K./banker 10 20 30
-[?2004l10 
+[?2004l
+10 
 20 
 30 
 Erro: Arquivo nao encontrado
 Erro
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lmake: 'banker' is up to date.
+[?2004l
+make: 'banker' is up to date.
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30
-[?2004l10 
+[?2004l
+10 
 20 
 30 
 Clientes lidos: 5
@@ -426,37 +481,49 @@ Clientes lidos: 5
 2 2 2 
 4 3 3 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./[K[Kmake
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 20 30[K[K[K[K[K5
-[?2004l10 
+[?2004l
+10 
 5 
 Erro: customer.txt linha 1 tem mais de 2 recursos
 Erro
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5
-[?2004lErro: customer.txt linha 1 tem mais de 2 recursos
+[?2004l
+Erro: customer.txt linha 1 tem mais de 2 recursos
 Erro
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5
-[?2004lErro: customer.txt linha 1 tem mais de 2 recursos
+[?2004l
+Erro: customer.txt linha 1 tem mais de 2 recursos
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ exit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-11-11 12:01:30-03:00 [COMMAND_EXIT_CODE="1"]
 Script started on 2026-11-11 14:32:15-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="229" LINES="19"]
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ cleargit commit -m "feat: implementa funcao para leitura do customer.txt e cria a matriz" && git push[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kmake cleanscript -a evidencias.logexit[K./banker 10 5make[K./banker 10 5make[K./banker 10 5make[K./banker 10 20 30make[K./banker 10 20 30make[Kclear[1Pmakeclear[1Pmake[1Ppwdwhoami[2Pdate
-[?2004lWed Nov 11 14:32:22 -03 2026
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ cleargit commit -m "feat: implementa funcao para leitura do customer.txt e cria a matriz" && git push
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kmake cleanscript -a evidencias.logexit[K./banker 10 5make[K./banker 10 5make[K./banker 10 5make[K./banker 10 20 30make[K./banker 10 20 30make[Kclear[1Pmakeclear[1Pmake[1Ppwdwhoami[2Pdate
+[?2004l
+Wed Nov 11 14:32:22 -03 2026
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ whoami
-[?2004lcwlui
+[?2004l
+cwlui
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ owd[K[K[Kpwd
-[?2004l/home/cwlui/projetos/algoritmo-de-banker
+[?2004l
+/home/cwlui/projetos/algoritmo-de-banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:28:17:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kcriar_matriz[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    28 |     int **max = [01;31m[Kcriar_matriz[m[K(countLinha, n_recursos);
@@ -475,7 +542,8 @@ Script started on 2026-11-11 14:32:15-03:00 [TERM="xterm-256color" TTY="/dev/pts
       |                [01;31m[K^[m[K
 make: *** [Makefile:8: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_customers[m[K’:
 [01m[Kbanker.c:28:17:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kcriar_matriz[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    28 |     int **max = [01;31m[Kcriar_matriz[m[K(countLinha, n_recursos);
@@ -489,52 +557,71 @@ make: *** [Makefile:8: banker.o] Error 1
    28 |     int **max = [01;36m[Kcriar_matriz[m[K(countLinha, n_recursos);
       |                 [01;36m[K^~~~~~~~~~~~[m[K
 make: *** [Makefile:8: banker.o] Error 1
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ^C[?2004l
+[?2004h[?2004l
+
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make[1Ppwdwhoami[2Pdatecleargit commit -m "feat: implementa funcao para leitura do customer.txt e cria a matriz" && git push[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kmake clean[1Pgit add .commit -m "feat: implementa funcao para leitura do customer.txt e cria a matriz" && git push[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclear[K[1Pdatewhoami[3Ppwdmake.[K[K[K[K[K./banker 10 5 7
-[?2004lSegmentation fault         ./banker 10 5 7
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make[1Ppwdwhoami[2Pdatecleargit commit -m "feat: implementa funcao para leitura do customer.txt e cria a matriz" && git push
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kmake clean[1Pgit add .commit -m "feat: implementa funcao para leitura do customer.txt e cria a matriz" && git push
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclear[K[1Pdatewhoami[3Ppwdmake.[K[K[K[K[K./banker 10 5 7
+[?2004l
+Segmentation fault         ./banker 10 5 7
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7make[K./banker 10 5 7
-[?2004lClientes lidos: 5
+[?2004l
+Clientes lidos: 5
 7 5 3 
 3 2 2 
 9 0 2 
 2 2 2 
 4 3 3 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lSegmentation fault         ./banker 10 5 7
+[?2004l
+Segmentation fault         ./banker 10 5 7
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lClientes lidos: 5
+[?2004l
+Clientes lidos: 5
 7 5 3 
 3 2 2 
 9 0 2 
 2 2 2 
 4 3 3 
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git add .
-[?2004l[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat: [7mcria funcao criar_matriz com calloc[27mcria funcao criar_matriz com calloc"
-[?2004l[main c1c00c9] feat: cria funcao criar_matriz com calloc
+[?2004l
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat: [7mcria funcao criar_matriz com calloc[27mcria funcao criar_matriz com calloc"
+[?2004l
+[main c1c00c9] feat: cria funcao criar_matriz com calloc
  3 files changed, 55 insertions(+), 3 deletions(-)
  create mode 100644 banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat: cria funcao criar_matriz coScript started on 2026-11-11 18:25:03-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="229" LINES="19"]
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ date
-[?2004lWed Nov 11 18:25:04 -03 2026
+[?2004l
+Wed Nov 11 18:25:04 -03 2026
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ whia[K[Koami
-[?2004lcwlui
+[?2004l
+cwlui
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ pwd
-[?2004l/home/cwlui/projetos/algoritmo-de-banker
+[?2004l
+/home/cwlui/projetos/algoritmo-de-banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kprocessar_comandos[m[K’:
 [01m[Kbanker.c:134:16:[m[K [01;31m[Kerror: [m[Kreturning ‘[01m[Kvoid *[m[K’ from a function with return type ‘[01m[Kint[m[K’ makes integer from pointer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
   134 |         return [01;31m[KNULL[m[K;
@@ -570,17 +657,20 @@ gcc main.o banker.o -o banker
       | [01;35m[K^[m[K
 make: *** [Makefile:8: banker.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_comando[m[K’:
 [01m[Kbanker.c:211:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-return-type-Wreturn-type]8;;[m[K]
   211 | [01;35m[K}[m[K
       | [01;35m[K^[m[K
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear[2Ppwdwhoami[3Ppwdclear[1Pmake[K./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -589,11 +679,14 @@ gcc main.o banker.o -o banker
 
 AVAILABLE 10 5 7
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c main.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c main.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear./banker 10 5 7[10Pclear./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -603,10 +696,12 @@ gcc main.o banker.o -o banker
 AVAILABLE 10 5 7
 Erro: Comando desconhecido
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -616,10 +711,12 @@ gcc main.o banker.o -o banker
 AVAILABLE 10 5 7
 Erro: Comando desconhecido
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -629,10 +726,12 @@ gcc main.o banker.o -o banker
 AVAILABLE 10 5 7
 Erro: customer.txt tem valor invalido
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -642,10 +741,12 @@ gcc main.o banker.o -o banker
 AVAILABLE 10 5 7
 Erro: customer.txt tem valor invalido
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -655,10 +756,12 @@ gcc main.o banker.o -o banker
 AVAILABLE 10 5 7
 Erro: commands.txt tem valor invalido: [1]
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -678,7 +781,8 @@ tipo=Q cliente=32766 recursos: 1 0 2
 tipo=Q cliente=32766 recursos: 0 2 0
 tipo=Q cliente=32766 recursos: 0 1 0
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 [01m[Kbanker.c:[m[K In function ‘[01m[Kler_comando[m[K’:
 [01m[Kbanker.c:196:63:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K[01;32m[K%ld[m[K[m[K’ expects argument of type ‘[01m[K[01;32m[Klong int[m[K[m[K’, but argument 2 has type ‘[01m[K[01;34m[Kint[m[K[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wformat-Wformat=]8;;[m[K]
   196 |         printf("Erro: commands.txt tem cliente inexistente: [01;32m[K%[m[K[01;32m[Kl[m[K[01;32m[Kd[m[K\n", [01;34m[Kv[m[K[01;34m[Ka[m[K[01;34m[Kl[m[K[01;34m[Ko[m[K[01;34m[Kr[m[K);
@@ -689,10 +793,12 @@ tipo=Q cliente=32766 recursos: 0 1 0
       |                                                             [32m[K%d[m[K
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -712,9 +818,11 @@ tipo=Q cliente=1 recursos: 1 0 2
 tipo=Q cliente=0 recursos: 0 2 0
 tipo=Q cliente=2 recursos: 0 1 0
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lmake: 'banker' is up to date.
+[?2004l
+make: 'banker' is up to date.
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -724,7 +832,8 @@ tipo=Q cliente=2 recursos: 0 1 0
 AVAILABLE 10 5 7
 Erro: Comando desconhecido
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -735,37 +844,82 @@ AVAILABLE 10 5 7
 tipo=Q cliente=0 recursos: 0 2 1
 Erro: Comando incomplemto
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -[K[K[K[K[K[K[K[Kadd .
-[?2004l[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat [K: [7mimplementa leitura e validacao do commands.txt[27mimplementa leitura e validacao do commands.txt:[K"
-[?2004l[main bf5b91d] feat: implementa leitura e validacao do commands.txt
+[?2004l
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat [K: [7mimplementa leitura e validacao do commands.txt[27mimplementa leitura e validacao do commands.txt:[K"
+[?2004l
+[main bf5b91d] feat: implementa leitura e validacao do commands.txt
  6 files changed, 272 insertions(+), 3 deletions(-)
  create mode 100644 commands.txt
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git push
-[?2004lEnumerating objects: 14, done.
-Counting objects:   7% (1/14)Counting objects:  14% (2/14)Counting objects:  21% (3/14)Counting objects:  28% (4/14)Counting objects:  35% (5/14)Counting objects:  42% (6/14)Counting objects:  50% (7/14)Counting objects:  57% (8/14)Counting objects:  64% (9/14)Counting objects:  71% (10/14)Counting objects:  78% (11/14)Counting objects:  85% (12/14)Counting objects:  92% (13/14)Counting objects: 100% (14/14)Counting objects: 100% (14/14), done.
+[?2004l
+Enumerating objects: 14, done.
+Counting objects:   7% (1/14)
+Counting objects:  14% (2/14)
+Counting objects:  21% (3/14)
+Counting objects:  28% (4/14)
+Counting objects:  35% (5/14)
+Counting objects:  42% (6/14)
+Counting objects:  50% (7/14)
+Counting objects:  57% (8/14)
+Counting objects:  64% (9/14)
+Counting objects:  71% (10/14)
+Counting objects:  78% (11/14)
+Counting objects:  85% (12/14)
+Counting objects:  92% (13/14)
+Counting objects: 100% (14/14)
+Counting objects: 100% (14/14), done.
 Delta compression using up to 4 threads
-Compressing objects:  12% (1/8)Compressing objects:  25% (2/8)Compressing objects:  37% (3/8)Compressing objects:  50% (4/8)Compressing objects:  62% (5/8)Compressing objects:  75% (6/8)Compressing objects:  87% (7/8)Compressing objects: 100% (8/8)Compressing objects: 100% (8/8), done.
-Writing objects:  12% (1/8)Writing objects:  25% (2/8)Writing objects:  37% (3/8)Writing objects:  50% (4/8)Writing objects:  62% (5/8)Writing objects:  75% (6/8)Writing objects:  87% (7/8)Writing objects: 100% (8/8)Writing objects: 100% (8/8), 5.82 KiB | 5.82 MiB/s, done.
+Compressing objects:  12% (1/8)
+Compressing objects:  25% (2/8)
+Compressing objects:  37% (3/8)
+Compressing objects:  50% (4/8)
+Compressing objects:  62% (5/8)
+Compressing objects:  75% (6/8)
+Compressing objects:  87% (7/8)
+Compressing objects: 100% (8/8)
+Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)
+Writing objects:  25% (2/8)
+Writing objects:  37% (3/8)
+Writing objects:  50% (4/8)
+Writing objects:  62% (5/8)
+Writing objects:  75% (6/8)
+Writing objects:  87% (7/8)
+Writing objects: 100% (8/8)
+Writing objects: 100% (8/8), 5.82 KiB | 5.82 MiB/s, done.
 Total 8 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas:   0% (0/5)[Kremote: Resolving deltas:  20% (1/5)[Kremote: Resolving deltas:  40% (2/5)[Kremote: Resolving deltas:  60% (3/5)[Kremote: Resolving deltas:  80% (4/5)[Kremote: Resolving deltas: 100% (5/5)[Kremote: Resolving deltas: 100% (5/5), completed with 5 local objects.[K
+remote: Resolving deltas:   0% (0/5)[K
+remote: Resolving deltas:  20% (1/5)[K
+remote: Resolving deltas:  40% (2/5)[K
+remote: Resolving deltas:  60% (3/5)[K
+remote: Resolving deltas:  80% (4/5)[K
+remote: Resolving deltas: 100% (5/5)[K
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.[K
 To https://github.com/Luiza029/Algoritmo-de-Banker.git
    2f587a1..bf5b91d  main -> main
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make clean
-[?2004lrm -f *.o banker result.txt
+[?2004l
+rm -f *.o banker result.txt
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
 Script done on 2026-11-11 20:16:39-03:00 [COMMAND_EXIT_CODE="0"]
 Script started on 2026-11-12 11:48:48-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="229" LINES="19"]
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ whoami
-[?2004lcwlui
+[?2004l
+cwlui
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ pwd
-[?2004l/home/cwlui/projetos/algoritmo-de-banker
+[?2004l
+/home/cwlui/projetos/algoritmo-de-banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ date
-[?2004lThu Nov 12 11:48:52 -03 2026
+[?2004l
+Thu Nov 12 11:48:52 -03 2026
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ m,a[K[Kma[K[Kake
-[?2004lgcc -Wall -Wextra -c main.c
+[?2004l
+gcc -Wall -Wextra -c main.c
 gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makedat[Cmak[C[K./banker 10 5 8[K7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -775,7 +929,8 @@ gcc main.o banker.o -o banker
 AVAILABLE 10 5 7
 Erro: commands.txt tem valor invalido: [1\n]
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 10 5 7make[K./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -794,9 +949,39 @@ tipo=Q cliente=4 recursos: 4 0 0
 tipo=Q cliente=1 recursos: 1 0 2
 tipo=Q cliente=0 recursos: 0 2 0
 tipo=Q cliente=2 recursos: 0 1 0
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ [K]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ 
+[K
+]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear./banker 10 5 7
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -816,7 +1001,8 @@ tipo=Q cliente=1 recursos: 1 0 2
 tipo=Q cliente=0 recursos: 0 2 0
 tipo=Q cliente=2 recursos: 0 1 0
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 10 5 7[10Pclear./banker 10 5 7
-[?2004lMAXIMUM | ALLOCATION | NEED
+[?2004l
+MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
 9 0 2 | 0 0 0 | 9 0 2
@@ -836,32 +1022,43 @@ tipo=Q cliente=1 recursos: 1 0 2
 tipo=Q cliente=0 recursos: 0 2 0
 tipo=Q cliente=2 recursos: 0 1 0
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear./banker 10 5 7[10Pclear./banker 10 5 7[10Pclear[Kmake
-[?2004lgcc -Wall -Wextra -c main.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear./banker 10 5 7[10Pclear./banker 10 5 7[10Pclear[Kmake
+[?2004l
+gcc -Wall -Wextra -c main.c
 gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear[1Pmake[K[7m./banker 99999999999 5 7[27m./banker 99999999999 5 7
-[?2004lErro: Nenhum linha lida no arquivo
+[?2004l
+Erro: Nenhum linha lida no arquivo
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 99999999999 5 7[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@1[1@0
-[?2004lErro: Nenhum linha lida no arquivo
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
-gcc main.o banker.o -o banker
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7[9@99999999999[C[C[C[C
-[?2004lErro: Nenhum linha lida no arquivo
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 99999999999 5 7make[K./banker 10 5 7
-[?2004lErro: Nenhum linha lida no arquivo
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
-gcc main.o banker.o -o banker
-[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004l0
+[?2004l
 Erro: Nenhum linha lida no arquivo
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c banker.c
+[?2004l
+gcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7[9@99999999999[C[C[C[C
+[?2004l
+Erro: Nenhum linha lida no arquivo
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 99999999999 5 7make[K./banker 10 5 7
+[?2004l
+Erro: Nenhum linha lida no arquivo
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c banker.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
-[?2004l5
+[?2004l
+0
+Erro: Nenhum linha lida no arquivo
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make./banker 10 5 7
+[?2004l
+5
 MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
@@ -881,7 +1078,8 @@ tipo=Q cliente=1 recursos: 1 0 2
 tipo=Q cliente=0 recursos: 0 2 0
 tipo=Q cliente=2 recursos: 0 1 0
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ./banker 10 5 7make[K./banker 10 5 7make[K./banker 10 5 7[9@99999999999[C[C[C[C
-[?2004l5
+[?2004l
+5
 MAXIMUM | ALLOCATION | NEED
 7 5 3 | 0 0 0 | 7 5 3
 3 2 2 | 0 0 0 | 3 2 2
@@ -901,25 +1099,34 @@ tipo=Q cliente=1 recursos: 1 0 2
 tipo=Q cliente=0 recursos: 0 2 0
 tipo=Q cliente=2 recursos: 0 1 0
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c main.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c main.c
 gcc main.o banker.o -o banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makeclear./banker 99999999999 5 7
-[?2004lErro: Numero muito grande [99999999999]
+[?2004l
+Erro: Numero muito grande [99999999999]
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git status[K[K[K[K[K[K[K[K[K[Kexit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-11-12 14:54:12-03:00 [COMMAND_EXIT_CODE="0"]
 Script started on 2026-11-12 15:47:32-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="229" LINES="35"]
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ date
-[?2004lThu Nov 12 15:47:33 -03 2026
+[?2004l
+Thu Nov 12 15:47:33 -03 2026
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ whoami
-[?2004lcwlui
+[?2004l
+cwlui
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ pwd
-[?2004l/home/cwlui/projetos/algoritmo-de-banker
+[?2004l
+/home/cwlui/projetos/algoritmo-de-banker
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
-[?2004lgcc -Wall -Wextra -c main.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c main.c
 [01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
 [01m[Kmain.c:68:21:[m[K [01;31m[Kerror: [m[Kpassing argument 1 of ‘[01m[Kimprimir_estado[m[K’ from incompatible pointer type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
    68 |     imprimir_estado([01;34m[Km[m[K[01;34m[Ka[m[K[01;34m[Kx[m[K, allocation, need, available, n_clientes, n_recursos);
@@ -958,8 +1165,10 @@ In file included from [01m[Kmain.c:4[m[K:
       |      [01;36m[K^~~~~~~~~~~~~~~[m[K
 make: *** [Makefile:5: main.o] Error 1
 [?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ ck[Klear
-[?2004l[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear[1Pmake
-[?2004lgcc -Wall -Wextra -c main.c
+[?2004l
+[H[2J[3J[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ clear[1Pmake
+[?2004l
+gcc -Wall -Wextra -c main.c
 [01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
 [01m[Kmain.c:68:21:[m[K [01;31m[Kerror: [m[Kpassing argument 1 of ‘[01m[Kimprimir_estado[m[K’ from incompatible pointer type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
    68 |     imprimir_estado([01;34m[Km[m[K[01;34m[Ka[m[K[01;34m[Kx[m[K, allocation, need, available, n_clientes, n_recursos);
@@ -989,4 +1198,37 @@ In file included from [01m[Kmain.c:4[m[K:
       |                                                       [32m[K&[m[K
 [01m[Kbanker.h:9:82:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[K[01;32m[Kint *[m[K[m[K’ but argument is of type ‘[01m[K[01;34m[Kint[m[K[m[K’
     9 | void imprimir_estado(FILE *saida, int ** max, int **allocation, int **need, [01;32m[Ki[m[K[01;32m[Kn[m[K[01;32m[Kt[m[K[01;32m[K [m[K[01;32m[K*[m[K[01;32m[Ka[m[K[01;32m[Kv[m[K[01;32m[Ka[m[K[01;32m[Ki[m[K[01;32m[Kl[m[K[01;32m[Ka[m[K[01;32m[Kb[m[K[01;32m[Kl[m[K[01;32m[Ke[m[K, int n_clientes, int n_recursos);
-      |                                                                             [01;32m[K~[m[K[01;32m[K~[m[K[01;
+      |                                                                             [01;32m[K~[m[K[01;32m[K~[m[K[01;Script started on 2026-11-14 15:49:40-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="229" LINES="35"]
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ whoami
+[?2004l
+cwlui
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ pwd
+[?2004l
+/home/cwlui/projetos/algoritmo-de-banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ date
+[?2004l
+Sat Nov 14 15:49:45 -03 2026
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+make: 'banker' is up to date.
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ makedat[C[1Ppwddatemak[C[K./banker 10 57[K 7
+[?2004l
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make l[Kclean
+[?2004l
+rm -f *.o banker result.txt
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make
+[?2004l
+gcc -Wall -Wextra -c main.c
+gcc -Wall -Wextra -c banker.c
+gcc main.o banker.o -o banker
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ make clean./banker 10 5 7
+[?2004l
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git add .
+[?2004l
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git commit -m "feat: implementa request e[K[K"
+[?2004l
+[main 159f48f] feat: implementa request
+ 4 files changed, 66 insertions(+), 35 deletions(-)
+ create mode 100644 result.txt
+[?2004h]0;cwlui@Luiza: ~/projetos/algoritmo-de-banker[01;32mcwlui@Luiza[00m:[01;34m~/projetos/algoritmo-de-banker[00m$ git pi[Kush
+[?2004l

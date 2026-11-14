@@ -65,6 +65,30 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    // TESTE eh_seguro: estado do "*" do PDF (deve ser SEGURO)
+    int alloc_teste[5][3] = {{0,1,0},{2,0,0},{3,0,2},{2,1,1},{0,0,2}};
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 3; j++){
+            allocation[i][j] = alloc_teste[i][j];
+            need[i][j] = max[i][j] - allocation[i][j];
+        }
+    }
+    available[0] = 3; available[1] = 3; available[2] = 2;
+
+    printf("seguro? %d\n", eh_seguro(available, allocation, need, n_clientes, n_recursos));
+
+    // TESTE eh_seguro: depois de conceder RQ 1 1 0 2 e fingir RQ 0 0 2 0 (deve ser INSEGURO)
+    allocation[1][0] = 3; allocation[1][2] = 2;   // cliente 1 ganhou 1 0 2
+    allocation[0][1] = 3;                         // cliente 0 "ganhou" 0 2 0
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 3; j++){
+            need[i][j] = max[i][j] - allocation[i][j];
+        }
+    }
+    available[0] = 2; available[1] = 1; available[2] = 0;
+
+    printf("seguro? %d\n", eh_seguro(available, allocation, need, n_clientes, n_recursos));
+
     allocation[0][1] = 2;
     need[0][1] = 3;
 

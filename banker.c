@@ -19,7 +19,6 @@ int **ler_customers(int n_recursos, int *n_clientes){
         }
     }
 
-    printf("%d\n", countLinha);
     if(countLinha == 0){
         printf("Erro: Nenhum linha lida no arquivo\n");
         fclose(arq);
@@ -306,4 +305,53 @@ void release(FILE *saida, int cliente, int *recursos, int **need, int *available
     fprintf(saida, "Release from customer %d the resources ", cliente);
     imprimir_vetor(saida, recursos, n_recursos);
     fprintf(saida, "\n");
+}
+
+int eh_seguro(int *available, int **allocation, int **need, int n_clientes, int n_recursos){
+    int work[n_recursos], termino[n_clientes];
+
+    for(int i=0; i<n_recursos; i++){
+        work[i] = available[i];
+    }
+
+    for(int i=0; i<n_clientes; i++){
+        termino[i] = 0;
+    }
+
+    int achou = 0;
+
+    do
+    {
+        achou = 0;
+        for(int i=0; i<n_clientes; i++){
+            if(termino[i] == 0){
+                int pode = 1;
+                for(int j=0; j<n_recursos; j++){
+                    if(need[i][j] > work[j]){
+                        pode = 0;
+                        break;
+                    }
+                }
+
+                if(pode){
+                    for(int j=0; j<n_recursos; j++){
+                        work[j] += allocation[i][j];
+                    }
+
+                    termino[i] = 1;
+                    achou = 1;
+                }
+            }
+        }
+    } while (achou == 1);
+
+    for(int i=0; i<n_clientes; i++){
+        if(termino[i] != 1){
+            printf("Nao eh seguro\n");
+            return 0;
+        }
+    }
+
+    printf("Eh seguro\n");
+    return 1;
 }

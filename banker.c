@@ -151,7 +151,7 @@ int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocati
     FILE *arq = fopen("commands.txt", "r");
 
     if(arq == NULL){
-        printf("Erro: customer.txt nao encontrado\n");
+        printf("Erro: commands.txt nao encontrado\n");
         return 0;
     }
 
@@ -185,6 +185,7 @@ int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocati
     FILE *saida = fopen("result.txt", "w");
     if(saida == NULL){
         printf("Erro: Arquivo nao encontrado\n");
+        fclose(saida);
         return 0;
     }
 

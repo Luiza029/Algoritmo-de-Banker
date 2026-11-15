@@ -185,7 +185,7 @@ int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocati
     FILE *saida = fopen("result.txt", "w");
     if(saida == NULL){
         printf("Erro: Arquivo nao encontrado\n");
-        fclose(saida);
+        fclose(arq);
         return 0;
     }
 

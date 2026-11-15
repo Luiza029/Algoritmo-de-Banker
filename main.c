@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     for(int i=0; i<n_recursos; i++){
         long valor = strtol(argv[i+1], &endptr, 10);
 
-        if(endptr == argv[i+1] || *endptr != '\0' || available[i] < 0){
+        if(endptr == argv[i+1] || *endptr != '\0' || valor < 0){
             printf("Erro: Entrada invalida, digite apenas inteiros nao negativos\n");
             free(available);
             return 1;
@@ -65,7 +65,13 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    processar_comandos(n_clientes, n_recursos, max, allocation, need, available);
+    if(processar_comandos(n_clientes, n_recursos, max, allocation, need, available) == 0){
+        liberar_matriz(need, n_clientes);
+        liberar_matriz(allocation, n_clientes);
+        liberar_matriz(max, n_clientes);
+        free(available);
+        return 1;
+    }
 
     liberar_matriz(need, n_clientes);
     liberar_matriz(allocation, n_clientes);

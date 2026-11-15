@@ -7,7 +7,7 @@ int **ler_customers(int n_recursos, int *n_clientes){
     FILE *arq = fopen("customer.txt", "r");
 
     if(arq == NULL){
-        printf("Erro: Arquivo nao encontrado\n");
+        printf("Erro: Arquivo customer.txt nao encontrado\n");
         return NULL;
     }
 
@@ -20,7 +20,7 @@ int **ler_customers(int n_recursos, int *n_clientes){
     }
 
     if(countLinha == 0){
-        printf("Erro: Nenhum linha lida no arquivo\n");
+        printf("Erro: customer.txt nao tem nenhum cliente\n");
         fclose(arq);
         return NULL;
     }
@@ -40,13 +40,26 @@ int **ler_customers(int n_recursos, int *n_clientes){
             continue;
         }
         int count = 0;
+
+        int tam = strlen(linha);
+        while(tam > 0 && (linha[tam-1] == '\n' || linha[tam-1] == '\r')){
+            tam--;
+        }
+
+        if(linha[0] == ',' || linha[tam-1] == ',' || strstr(linha, ",,") != NULL){
+            printf("Erro: customer.txt linha %d tem virgula sobrando\n", cliente + 1);
+            fclose(arq);
+            liberar_matriz(max, countLinha);
+            return NULL;
+        }
+
         char *pedaco = strtok(linha, ",\r\n");
        
         while(pedaco != NULL){
             char *fim;
             long valor = strtol(pedaco, &fim, 10);
 
-            if(fim == pedaco || *fim != '\0' || valor <0){
+            if(fim == pedaco || *fim != '\0' || valor <0 || valor > MAX_INSTANCIAS){
                 printf("Erro: customer.txt linha %d tem valor invalido: %s\n", cliente + 1, pedaco);
                 fclose(arq);
                 liberar_matriz(max, countLinha);
@@ -136,10 +149,9 @@ void imprimir_estado(FILE *saida, int ** max, int **allocation, int **need, int 
 
 int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocation, int **need, int *available){
     FILE *arq = fopen("commands.txt", "r");
-    FILE *saida = fopen("result.txt", "w");
 
-    if(arq == NULL || saida == NULL){
-        printf("Erro: Arquivo nao encontrado\n");
+    if(arq == NULL){
+        printf("Erro: customer.txt nao encontrado\n");
         return 0;
     }
 
@@ -170,6 +182,12 @@ int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocati
 
     rewind(arq);
 
+    FILE *saida = fopen("result.txt", "w");
+    if(saida == NULL){
+        printf("Erro: Arquivo nao encontrado\n");
+        return 0;
+    }
+
      while(fgets(linhaComando, sizeof(linhaComando), arq) != NULL){
         if(linhaComando[0] == '\n' || linhaComando[0] == '\r'){
             continue;
@@ -177,6 +195,7 @@ int processar_comandos(int n_clientes, int n_recursos, int **max, int **allocati
 
         if(ler_comando(linhaComando, n_clientes, n_recursos, &tipo, &cliente, recursos) == 0){
             fclose(arq);
+            fclose(saida);
             return 0;
         }
 
@@ -228,13 +247,13 @@ int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cli
     }
 
     else{
-        printf("Erro: Comando desconhecido\n");
+        printf("Erro: commands.txt tem comando desconhecido: [%s]\n", pedaco);
         return 0;
     }
 
     pedaco = strtok(NULL, " \r\n");
     if(pedaco == NULL){
-        printf("Erro: Comando incomplemto\n");
+        printf("Erro: commands.txt tem comando incompleto\n");
         return 0;
     }
 
@@ -259,7 +278,7 @@ int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cli
         char *fim;
         long valor = strtol(pedaco, &fim, 10);
 
-        if(fim == pedaco || *fim != '\0' || valor <0){
+        if(fim == pedaco || *fim != '\0' || valor <0 || valor > MAX_INSTANCIAS){
             printf("Erro: commands.txt tem valor invalido: [%s]\n", pedaco);
             return 0;
         }
@@ -275,7 +294,7 @@ int ler_comando(char *linha, int n_clientes, int n_recursos,char *tipo, int *cli
     }   
 
     if(count != n_recursos){
-        printf("Erro: Recusos a menos\n");
+        printf("Erro: commands.txt tem recursos a menos no comando\n");
         return 0;
     }
 

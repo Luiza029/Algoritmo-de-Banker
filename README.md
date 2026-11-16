@@ -5,6 +5,8 @@
 - `banker.c`: funções do programa (leitura dos arquivos, validação, `request`, `release`, teste de segurança e impressão do estado).
 - `banker.h`: protótipos das funções.
 - `Makefile`: compila o projeto e gera o executável `banker`.
+- `testar_banker.sh`: script de testes automáticos (exemplo do PDF, casos de erro e casos de borda). (gerado com IA)
+- `fuzz_banker.c`: compara o programa com uma implementação de referência usando entradas aleatórias; é compilado e chamado pelo `testar_banker.sh`. (gerado com IA)
 
 ## Como compilar
 
@@ -27,6 +29,12 @@ Cada argumento é o número de instâncias de um tipo de recurso:
 ```
 
 Os arquivos `customer.txt` e `commands.txt` precisam estar na mesma pasta do executável.
+
+## Como Testar
+```bash
+chmod +x testar_banker.sh
+./testar_banker.sh
+```
 
 ### Saída
 O resultado de cada comando é gravado em `result.txt`. Mensagens de erro aparecem no terminal.

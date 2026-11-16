@@ -46,7 +46,7 @@ int **ler_customers(int n_recursos, int *n_clientes){
             tam--;
         }
 
-        if(linha[0] == ',' || linha[tam-1] == ',' || strstr(linha, ",,") != NULL){
+        if(linha[0] == ',' || (tam > 0 && linha[tam-1] == ',') || strstr(linha, ",,") != NULL){
             printf("Erro: customer.txt linha %d tem virgula sobrando\n", cliente + 1);
             fclose(arq);
             liberar_matriz(max, countLinha);
